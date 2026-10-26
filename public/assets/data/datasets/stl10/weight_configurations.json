@@ -1,0 +1,1030 @@
+{
+  "schemaVersion": 1,
+  "dataset": "STL-10",
+  "datasetId": "stl10",
+  "numLabeled": 1000,
+  "labeledPerClass": 100,
+  "numValidation": 1000,
+  "inputSize": 32,
+  "originalImageSize": 96,
+  "fold": 0,
+  "normalization": {
+    "mean": [
+      0.4914,
+      0.4822,
+      0.4465
+    ],
+    "std": [
+      0.2471,
+      0.2435,
+      0.2616
+    ]
+  },
+  "unlabeledGroundTruthAvailable": false,
+  "epochs": 300,
+  "epochIndexing": "zero-based (0 through 299)",
+  "classNames": [
+    "airplane",
+    "bird",
+    "car",
+    "cat",
+    "deer",
+    "dog",
+    "horse",
+    "monkey",
+    "ship",
+    "truck"
+  ],
+  "selectionSplit": "validation",
+  "accuracyMetric": "best validation overall accuracy percent",
+  "defaultConfigurationId": "S9",
+  "defaultRun": "a0p08_b0p45_g0p47_seed5",
+  "defaultReason": "user-selected recommended weights alpha=0.08, beta=0.45, gamma=0.47",
+  "highestValidationAccuracyId": "S11",
+  "configurations": [
+    {
+      "id": "S1",
+      "run": "a1p00_b0p00_g0p00_seed5",
+      "alpha": 1.0,
+      "beta": 0.0,
+      "gamma": 0.0,
+      "description": "alpha vertex",
+      "recommended": false,
+      "simulated": false,
+      "accuracy": 72.3,
+      "accuracyMetric": "best validation overall accuracy percent",
+      "bestEpoch": 176,
+      "lastEpoch": 299,
+      "completedEpochs": 300,
+      "seed": 5,
+      "dataPath": "/assets/data/configurations/a1p00_b0p00_g0p00_seed5",
+      "models": [
+        {
+          "name": "epoch_0_checkpoint",
+          "training_epoch_index": 0,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 0"
+        },
+        {
+          "name": "epoch_20_checkpoint",
+          "training_epoch_index": 20,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 20"
+        },
+        {
+          "name": "epoch_40_checkpoint",
+          "training_epoch_index": 40,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 40"
+        },
+        {
+          "name": "epoch_60_checkpoint",
+          "training_epoch_index": 60,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 60"
+        },
+        {
+          "name": "epoch_80_checkpoint",
+          "training_epoch_index": 80,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 80"
+        },
+        {
+          "name": "epoch_100_checkpoint",
+          "training_epoch_index": 100,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 100"
+        },
+        {
+          "name": "epoch_200_checkpoint",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200"
+        },
+        {
+          "name": "epoch_299_checkpoint",
+          "training_epoch_index": 299,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 299"
+        },
+        {
+          "name": "model_best",
+          "training_epoch_index": 176,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 176 (best)"
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "run": "a0p00_b1p00_g0p00_seed5",
+      "alpha": 0.0,
+      "beta": 1.0,
+      "gamma": 0.0,
+      "description": "beta vertex",
+      "recommended": false,
+      "simulated": false,
+      "accuracy": 73.0,
+      "accuracyMetric": "best validation overall accuracy percent",
+      "bestEpoch": 173,
+      "lastEpoch": 299,
+      "completedEpochs": 300,
+      "seed": 5,
+      "dataPath": "/assets/data/configurations/a0p00_b1p00_g0p00_seed5",
+      "models": [
+        {
+          "name": "epoch_0_checkpoint",
+          "training_epoch_index": 0,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 0"
+        },
+        {
+          "name": "epoch_20_checkpoint",
+          "training_epoch_index": 20,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 20"
+        },
+        {
+          "name": "epoch_40_checkpoint",
+          "training_epoch_index": 40,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 40"
+        },
+        {
+          "name": "epoch_60_checkpoint",
+          "training_epoch_index": 60,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 60"
+        },
+        {
+          "name": "epoch_80_checkpoint",
+          "training_epoch_index": 80,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 80"
+        },
+        {
+          "name": "epoch_100_checkpoint",
+          "training_epoch_index": 100,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 100"
+        },
+        {
+          "name": "epoch_200_checkpoint",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200"
+        },
+        {
+          "name": "epoch_299_checkpoint",
+          "training_epoch_index": 299,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 299"
+        },
+        {
+          "name": "model_best",
+          "training_epoch_index": 173,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 173 (best)"
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "run": "a0p00_b0p00_g1p00_seed5",
+      "alpha": 0.0,
+      "beta": 0.0,
+      "gamma": 1.0,
+      "description": "gamma vertex",
+      "recommended": false,
+      "simulated": false,
+      "accuracy": 71.89999999999999,
+      "accuracyMetric": "best validation overall accuracy percent",
+      "bestEpoch": 200,
+      "lastEpoch": 299,
+      "completedEpochs": 300,
+      "seed": 5,
+      "dataPath": "/assets/data/configurations/a0p00_b0p00_g1p00_seed5",
+      "models": [
+        {
+          "name": "epoch_0_checkpoint",
+          "training_epoch_index": 0,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 0"
+        },
+        {
+          "name": "epoch_20_checkpoint",
+          "training_epoch_index": 20,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 20"
+        },
+        {
+          "name": "epoch_40_checkpoint",
+          "training_epoch_index": 40,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 40"
+        },
+        {
+          "name": "epoch_60_checkpoint",
+          "training_epoch_index": 60,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 60"
+        },
+        {
+          "name": "epoch_80_checkpoint",
+          "training_epoch_index": 80,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 80"
+        },
+        {
+          "name": "epoch_100_checkpoint",
+          "training_epoch_index": 100,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 100"
+        },
+        {
+          "name": "epoch_200_checkpoint",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200"
+        },
+        {
+          "name": "epoch_299_checkpoint",
+          "training_epoch_index": 299,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 299"
+        },
+        {
+          "name": "model_best",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200 (best)"
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "run": "a0p50_b0p50_g0p00_seed5",
+      "alpha": 0.5,
+      "beta": 0.5,
+      "gamma": 0.0,
+      "description": "alpha-beta edge midpoint",
+      "recommended": false,
+      "simulated": false,
+      "accuracy": 72.1,
+      "accuracyMetric": "best validation overall accuracy percent",
+      "bestEpoch": 171,
+      "lastEpoch": 299,
+      "completedEpochs": 300,
+      "seed": 5,
+      "dataPath": "/assets/data/configurations/a0p50_b0p50_g0p00_seed5",
+      "models": [
+        {
+          "name": "epoch_0_checkpoint",
+          "training_epoch_index": 0,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 0"
+        },
+        {
+          "name": "epoch_20_checkpoint",
+          "training_epoch_index": 20,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 20"
+        },
+        {
+          "name": "epoch_40_checkpoint",
+          "training_epoch_index": 40,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 40"
+        },
+        {
+          "name": "epoch_60_checkpoint",
+          "training_epoch_index": 60,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 60"
+        },
+        {
+          "name": "epoch_80_checkpoint",
+          "training_epoch_index": 80,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 80"
+        },
+        {
+          "name": "epoch_100_checkpoint",
+          "training_epoch_index": 100,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 100"
+        },
+        {
+          "name": "epoch_200_checkpoint",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200"
+        },
+        {
+          "name": "epoch_299_checkpoint",
+          "training_epoch_index": 299,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 299"
+        },
+        {
+          "name": "model_best",
+          "training_epoch_index": 171,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 171 (best)"
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "run": "a0p50_b0p00_g0p50_seed5",
+      "alpha": 0.5,
+      "beta": 0.0,
+      "gamma": 0.5,
+      "description": "alpha-gamma edge midpoint",
+      "recommended": false,
+      "simulated": false,
+      "accuracy": 72.3,
+      "accuracyMetric": "best validation overall accuracy percent",
+      "bestEpoch": 134,
+      "lastEpoch": 299,
+      "completedEpochs": 300,
+      "seed": 5,
+      "dataPath": "/assets/data/configurations/a0p50_b0p00_g0p50_seed5",
+      "models": [
+        {
+          "name": "epoch_0_checkpoint",
+          "training_epoch_index": 0,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 0"
+        },
+        {
+          "name": "epoch_20_checkpoint",
+          "training_epoch_index": 20,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 20"
+        },
+        {
+          "name": "epoch_40_checkpoint",
+          "training_epoch_index": 40,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 40"
+        },
+        {
+          "name": "epoch_60_checkpoint",
+          "training_epoch_index": 60,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 60"
+        },
+        {
+          "name": "epoch_80_checkpoint",
+          "training_epoch_index": 80,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 80"
+        },
+        {
+          "name": "epoch_100_checkpoint",
+          "training_epoch_index": 100,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 100"
+        },
+        {
+          "name": "epoch_200_checkpoint",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200"
+        },
+        {
+          "name": "epoch_299_checkpoint",
+          "training_epoch_index": 299,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 299"
+        },
+        {
+          "name": "model_best",
+          "training_epoch_index": 134,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 134 (best)"
+        }
+      ]
+    },
+    {
+      "id": "S6",
+      "run": "a0p00_b0p50_g0p50_seed5",
+      "alpha": 0.0,
+      "beta": 0.5,
+      "gamma": 0.5,
+      "description": "beta-gamma edge midpoint",
+      "recommended": false,
+      "simulated": false,
+      "accuracy": 72.2,
+      "accuracyMetric": "best validation overall accuracy percent",
+      "bestEpoch": 130,
+      "lastEpoch": 299,
+      "completedEpochs": 300,
+      "seed": 5,
+      "dataPath": "/assets/data/configurations/a0p00_b0p50_g0p50_seed5",
+      "models": [
+        {
+          "name": "epoch_0_checkpoint",
+          "training_epoch_index": 0,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 0"
+        },
+        {
+          "name": "epoch_20_checkpoint",
+          "training_epoch_index": 20,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 20"
+        },
+        {
+          "name": "epoch_40_checkpoint",
+          "training_epoch_index": 40,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 40"
+        },
+        {
+          "name": "epoch_60_checkpoint",
+          "training_epoch_index": 60,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 60"
+        },
+        {
+          "name": "epoch_80_checkpoint",
+          "training_epoch_index": 80,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 80"
+        },
+        {
+          "name": "epoch_100_checkpoint",
+          "training_epoch_index": 100,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 100"
+        },
+        {
+          "name": "epoch_200_checkpoint",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200"
+        },
+        {
+          "name": "epoch_299_checkpoint",
+          "training_epoch_index": 299,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 299"
+        },
+        {
+          "name": "model_best",
+          "training_epoch_index": 130,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 130 (best)"
+        }
+      ]
+    },
+    {
+      "id": "S7",
+      "run": "a0p34_b0p33_g0p33_seed5",
+      "alpha": 0.34,
+      "beta": 0.33,
+      "gamma": 0.33,
+      "description": "simplex centroid",
+      "recommended": false,
+      "simulated": false,
+      "accuracy": 71.7,
+      "accuracyMetric": "best validation overall accuracy percent",
+      "bestEpoch": 226,
+      "lastEpoch": 299,
+      "completedEpochs": 300,
+      "seed": 5,
+      "dataPath": "/assets/data/configurations/a0p34_b0p33_g0p33_seed5",
+      "models": [
+        {
+          "name": "epoch_0_checkpoint",
+          "training_epoch_index": 0,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 0"
+        },
+        {
+          "name": "epoch_20_checkpoint",
+          "training_epoch_index": 20,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 20"
+        },
+        {
+          "name": "epoch_40_checkpoint",
+          "training_epoch_index": 40,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 40"
+        },
+        {
+          "name": "epoch_60_checkpoint",
+          "training_epoch_index": 60,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 60"
+        },
+        {
+          "name": "epoch_80_checkpoint",
+          "training_epoch_index": 80,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 80"
+        },
+        {
+          "name": "epoch_100_checkpoint",
+          "training_epoch_index": 100,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 100"
+        },
+        {
+          "name": "epoch_200_checkpoint",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200"
+        },
+        {
+          "name": "epoch_299_checkpoint",
+          "training_epoch_index": 299,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 299"
+        },
+        {
+          "name": "model_best",
+          "training_epoch_index": 226,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 226 (best)"
+        }
+      ]
+    },
+    {
+      "id": "S8",
+      "run": "a0p50_b0p30_g0p20_seed5",
+      "alpha": 0.5,
+      "beta": 0.3,
+      "gamma": 0.2,
+      "description": "legacy baseline",
+      "recommended": false,
+      "simulated": false,
+      "accuracy": 72.3,
+      "accuracyMetric": "best validation overall accuracy percent",
+      "bestEpoch": 171,
+      "lastEpoch": 299,
+      "completedEpochs": 300,
+      "seed": 5,
+      "dataPath": "/assets/data/configurations/a0p50_b0p30_g0p20_seed5",
+      "models": [
+        {
+          "name": "epoch_0_checkpoint",
+          "training_epoch_index": 0,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 0"
+        },
+        {
+          "name": "epoch_20_checkpoint",
+          "training_epoch_index": 20,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 20"
+        },
+        {
+          "name": "epoch_40_checkpoint",
+          "training_epoch_index": 40,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 40"
+        },
+        {
+          "name": "epoch_60_checkpoint",
+          "training_epoch_index": 60,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 60"
+        },
+        {
+          "name": "epoch_80_checkpoint",
+          "training_epoch_index": 80,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 80"
+        },
+        {
+          "name": "epoch_100_checkpoint",
+          "training_epoch_index": 100,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 100"
+        },
+        {
+          "name": "epoch_200_checkpoint",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200"
+        },
+        {
+          "name": "epoch_299_checkpoint",
+          "training_epoch_index": 299,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 299"
+        },
+        {
+          "name": "model_best",
+          "training_epoch_index": 171,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 171 (best)"
+        }
+      ]
+    },
+    {
+      "id": "S9",
+      "run": "a0p08_b0p45_g0p47_seed5",
+      "alpha": 0.08,
+      "beta": 0.45,
+      "gamma": 0.47,
+      "description": "recommended weights",
+      "recommended": true,
+      "simulated": false,
+      "accuracy": 71.2,
+      "accuracyMetric": "best validation overall accuracy percent",
+      "bestEpoch": 201,
+      "lastEpoch": 299,
+      "completedEpochs": 300,
+      "seed": 5,
+      "dataPath": "/assets/data/configurations/a0p08_b0p45_g0p47_seed5",
+      "models": [
+        {
+          "name": "epoch_0_checkpoint",
+          "training_epoch_index": 0,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 0"
+        },
+        {
+          "name": "epoch_20_checkpoint",
+          "training_epoch_index": 20,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 20"
+        },
+        {
+          "name": "epoch_40_checkpoint",
+          "training_epoch_index": 40,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 40"
+        },
+        {
+          "name": "epoch_60_checkpoint",
+          "training_epoch_index": 60,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 60"
+        },
+        {
+          "name": "epoch_80_checkpoint",
+          "training_epoch_index": 80,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 80"
+        },
+        {
+          "name": "epoch_100_checkpoint",
+          "training_epoch_index": 100,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 100"
+        },
+        {
+          "name": "epoch_200_checkpoint",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200"
+        },
+        {
+          "name": "epoch_299_checkpoint",
+          "training_epoch_index": 299,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 299"
+        },
+        {
+          "name": "model_best",
+          "training_epoch_index": 201,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 201 (best)"
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "run": "a0p84_b0p05_g0p11_seed5",
+      "alpha": 0.84,
+      "beta": 0.05,
+      "gamma": 0.11,
+      "description": "interior candidate",
+      "recommended": false,
+      "simulated": false,
+      "accuracy": 72.6,
+      "accuracyMetric": "best validation overall accuracy percent",
+      "bestEpoch": 159,
+      "lastEpoch": 299,
+      "completedEpochs": 300,
+      "seed": 5,
+      "dataPath": "/assets/data/configurations/a0p84_b0p05_g0p11_seed5",
+      "models": [
+        {
+          "name": "epoch_0_checkpoint",
+          "training_epoch_index": 0,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 0"
+        },
+        {
+          "name": "epoch_20_checkpoint",
+          "training_epoch_index": 20,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 20"
+        },
+        {
+          "name": "epoch_40_checkpoint",
+          "training_epoch_index": 40,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 40"
+        },
+        {
+          "name": "epoch_60_checkpoint",
+          "training_epoch_index": 60,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 60"
+        },
+        {
+          "name": "epoch_80_checkpoint",
+          "training_epoch_index": 80,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 80"
+        },
+        {
+          "name": "epoch_100_checkpoint",
+          "training_epoch_index": 100,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 100"
+        },
+        {
+          "name": "epoch_200_checkpoint",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200"
+        },
+        {
+          "name": "epoch_299_checkpoint",
+          "training_epoch_index": 299,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 299"
+        },
+        {
+          "name": "model_best",
+          "training_epoch_index": 159,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 159 (best)"
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "run": "a0p28_b0p25_g0p47_seed5",
+      "alpha": 0.28,
+      "beta": 0.25,
+      "gamma": 0.47,
+      "description": "interior candidate",
+      "recommended": false,
+      "simulated": false,
+      "accuracy": 73.7,
+      "accuracyMetric": "best validation overall accuracy percent",
+      "bestEpoch": 196,
+      "lastEpoch": 299,
+      "completedEpochs": 300,
+      "seed": 5,
+      "dataPath": "/assets/data/configurations/a0p28_b0p25_g0p47_seed5",
+      "models": [
+        {
+          "name": "epoch_0_checkpoint",
+          "training_epoch_index": 0,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 0"
+        },
+        {
+          "name": "epoch_20_checkpoint",
+          "training_epoch_index": 20,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 20"
+        },
+        {
+          "name": "epoch_40_checkpoint",
+          "training_epoch_index": 40,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 40"
+        },
+        {
+          "name": "epoch_60_checkpoint",
+          "training_epoch_index": 60,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 60"
+        },
+        {
+          "name": "epoch_80_checkpoint",
+          "training_epoch_index": 80,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 80"
+        },
+        {
+          "name": "epoch_100_checkpoint",
+          "training_epoch_index": 100,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 100"
+        },
+        {
+          "name": "epoch_200_checkpoint",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200"
+        },
+        {
+          "name": "epoch_299_checkpoint",
+          "training_epoch_index": 299,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 299"
+        },
+        {
+          "name": "model_best",
+          "training_epoch_index": 196,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 196 (best)"
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "run": "a0p22_b0p37_g0p41_seed5",
+      "alpha": 0.22,
+      "beta": 0.37,
+      "gamma": 0.41,
+      "description": "interior candidate",
+      "recommended": false,
+      "simulated": false,
+      "accuracy": 72.3,
+      "accuracyMetric": "best validation overall accuracy percent",
+      "bestEpoch": 124,
+      "lastEpoch": 299,
+      "completedEpochs": 300,
+      "seed": 5,
+      "dataPath": "/assets/data/configurations/a0p22_b0p37_g0p41_seed5",
+      "models": [
+        {
+          "name": "epoch_0_checkpoint",
+          "training_epoch_index": 0,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 0"
+        },
+        {
+          "name": "epoch_20_checkpoint",
+          "training_epoch_index": 20,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 20"
+        },
+        {
+          "name": "epoch_40_checkpoint",
+          "training_epoch_index": 40,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 40"
+        },
+        {
+          "name": "epoch_60_checkpoint",
+          "training_epoch_index": 60,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 60"
+        },
+        {
+          "name": "epoch_80_checkpoint",
+          "training_epoch_index": 80,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 80"
+        },
+        {
+          "name": "epoch_100_checkpoint",
+          "training_epoch_index": 100,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 100"
+        },
+        {
+          "name": "epoch_200_checkpoint",
+          "training_epoch_index": 200,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 200"
+        },
+        {
+          "name": "epoch_299_checkpoint",
+          "training_epoch_index": 299,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 299"
+        },
+        {
+          "name": "model_best",
+          "training_epoch_index": 124,
+          "onnx": true,
+          "gradcam": true,
+          "label": "Epoch 124 (best)"
+        }
+      ]
+    }
+  ]
+}

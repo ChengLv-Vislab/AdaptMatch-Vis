@@ -1,0 +1,109 @@
+{
+  "dataset": "STL-10",
+  "source_split": "official test",
+  "selection": "fixed clear-subject examples, selected visually without using model predictions",
+  "preview_size": [
+    96,
+    96
+  ],
+  "model_input_size": [
+    32,
+    32
+  ],
+  "preprocessing": "official RGB96 original for display; paired PIL bilinear RGB32 cache for inference",
+  "images": [
+    {
+      "class_index": 0,
+      "class_name": "airplane",
+      "test_index": 13,
+      "filename": "airplane.png",
+      "preview": "original-gallery/airplane.png",
+      "input_sha256": "5f0b3f5c1d92b8371f23f48087c1c8346ed98952275b989e20878917664a08ca",
+      "preview_sha256": "09b5eca5d40542be186ec76081164993b344a8fd4df678bf083a43ee31c174cc"
+    },
+    {
+      "class_index": 1,
+      "class_name": "bird",
+      "test_index": 46,
+      "filename": "bird.png",
+      "preview": "original-gallery/bird.png",
+      "input_sha256": "9fbe1c35d31b382ca7e5f13ab799a3346bc17d0049fe68b8a982f1be1a80f19b",
+      "preview_sha256": "79e2d3fbc72201136cc1fae82c7b4bd432d721d2aeeac7ae68d48eb3106e44ed"
+    },
+    {
+      "class_index": 2,
+      "class_name": "car",
+      "test_index": 49,
+      "filename": "car.png",
+      "preview": "original-gallery/car.png",
+      "input_sha256": "cb929f0dc1fe86f39baebbae1ee61ca9f1747465ed9339fd19e76f0b7141ac90",
+      "preview_sha256": "13160189963f8e23cc91a6214a2feb29952c7307b43111c7250e39036fe99205"
+    },
+    {
+      "class_index": 3,
+      "class_name": "cat",
+      "test_index": 23,
+      "filename": "cat.jpg",
+      "preview": "original-gallery/cat.jpg",
+      "input_sha256": "415079216ddeee9fcee78168ea90e419c2df9a6218331dd7c1683a373f52fd48",
+      "preview_sha256": "b91a780298d0ec90f639bbb9a4b30a2f7f40f86350cc1f0caa29832f832b8d77"
+    },
+    {
+      "class_index": 4,
+      "class_name": "deer",
+      "test_index": 16,
+      "filename": "deer.png",
+      "preview": "original-gallery/deer.png",
+      "input_sha256": "95571b20043c95ef79e270dd984834c5565fc35baed260a227978707dc976bad",
+      "preview_sha256": "5e9775de7c649d0e451ee2b1cfc9aa7d74007cee98688bac52a55ba4cd7f2a63"
+    },
+    {
+      "class_index": 5,
+      "class_name": "dog",
+      "test_index": 26,
+      "filename": "dog.png",
+      "preview": "original-gallery/dog.png",
+      "input_sha256": "7812799772cf1fde3d2e723cc38a93e1c9a77168668a1d8d5516652af27497d7",
+      "preview_sha256": "fcf9eef53e38941d006ddcaa5c4136da4bb7de7448da9ed3c4d13dee077818c1"
+    },
+    {
+      "class_index": 6,
+      "class_name": "horse",
+      "test_index": 65,
+      "filename": "horse.png",
+      "preview": "original-gallery/horse.png",
+      "input_sha256": "1b70c4d628fa4a2c17316525a6e69771f005f42beaa83c68a7a03af03cbf2358",
+      "preview_sha256": "fa85f50470fecba1ed3159efa769f5999896e1b3acf9a2046b1097f3626401db"
+    },
+    {
+      "class_index": 7,
+      "class_name": "monkey",
+      "test_index": 72,
+      "filename": "monkey.png",
+      "preview": "original-gallery/monkey.png",
+      "input_sha256": "ee79d2f8b1e8699cf3d8871f22dbc191eb4db8dd3419f4ab02fa8964661ad91e",
+      "preview_sha256": "232def0f4a25b1f47130b7b40aebee4df77eac47d0ef5084dcfe9c2af561412e"
+    },
+    {
+      "class_index": 8,
+      "class_name": "ship",
+      "test_index": 122,
+      "filename": "ship.png",
+      "preview": "original-gallery/ship.png",
+      "input_sha256": "1e50d2bbf516aac707a58773a4c50cb9a387f3f7af11b3cc50342096018b0882",
+      "preview_sha256": "bbdaf03ea6d7604c2ae834346eef7a2320206208b2a5c739d89af0eeef926df9"
+    },
+    {
+      "class_index": 9,
+      "class_name": "truck",
+      "test_index": 64,
+      "filename": "truck.png",
+      "preview": "original-gallery/truck.png",
+      "input_sha256": "9d4d422a7d77d4c0dc6d3376398a6a5d191b6f39e53886d5968dc246b6cc505d",
+      "preview_sha256": "5f5748a629a1e7c91ef10c1e2b876d6200309854a7a77078add25895fc8b3b91"
+    }
+  ],
+  "compatibility_aliases": {
+    "hours.png": "horse.png"
+  }
+}

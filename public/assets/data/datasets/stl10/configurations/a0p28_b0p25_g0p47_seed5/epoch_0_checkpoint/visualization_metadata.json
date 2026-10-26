@@ -1,0 +1,107 @@
+{
+  "checkpoint": "epoch_0_checkpoint",
+  "training_epoch_index": 0,
+  "weight_shapes": {
+    "conv_1.bin": [
+      16,
+      3,
+      3,
+      3
+    ],
+    "output.bin": [
+      10,
+      2048
+    ],
+    "norm_mean.bin": [
+      128
+    ],
+    "norm_var.bin": [
+      128
+    ],
+    "norm_weight.bin": [
+      128
+    ],
+    "norm_bias.bin": [
+      128
+    ]
+  },
+  "gradcam": [
+    {
+      "image": "airplane.png",
+      "predicted_class_index": 8,
+      "predicted_class": "ship",
+      "confidence": 0.2802339494228363,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "bird.png",
+      "predicted_class_index": 9,
+      "predicted_class": "truck",
+      "confidence": 0.3021894693374634,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "car.png",
+      "predicted_class_index": 9,
+      "predicted_class": "truck",
+      "confidence": 0.15775878727436066,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "cat.jpg",
+      "predicted_class_index": 8,
+      "predicted_class": "ship",
+      "confidence": 0.17769403755664825,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "deer.png",
+      "predicted_class_index": 8,
+      "predicted_class": "ship",
+      "confidence": 0.19817489385604858,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "dog.png",
+      "predicted_class_index": 8,
+      "predicted_class": "ship",
+      "confidence": 0.21101953089237213,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "monkey.png",
+      "predicted_class_index": 8,
+      "predicted_class": "ship",
+      "confidence": 0.23047105967998505,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "horse.png",
+      "predicted_class_index": 8,
+      "predicted_class": "ship",
+      "confidence": 0.15586231648921967,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "hours.png",
+      "predicted_class_index": 8,
+      "predicted_class": "ship",
+      "confidence": 0.15586231648921967,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "ship.png",
+      "predicted_class_index": 9,
+      "predicted_class": "truck",
+      "confidence": 0.9663300514221191,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "truck.png",
+      "predicted_class_index": 8,
+      "predicted_class": "ship",
+      "confidence": 0.24500952661037445,
+      "layer": "block_3_layer_4_out"
+    }
+  ]
+}

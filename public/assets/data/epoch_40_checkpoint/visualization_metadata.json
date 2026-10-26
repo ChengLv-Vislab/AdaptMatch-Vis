@@ -1,0 +1,107 @@
+{
+  "checkpoint": "epoch_40_checkpoint",
+  "training_epoch_index": 40,
+  "weight_shapes": {
+    "conv_1.bin": [
+      16,
+      3,
+      3,
+      3
+    ],
+    "output.bin": [
+      10,
+      2048
+    ],
+    "norm_mean.bin": [
+      128
+    ],
+    "norm_var.bin": [
+      128
+    ],
+    "norm_weight.bin": [
+      128
+    ],
+    "norm_bias.bin": [
+      128
+    ]
+  },
+  "gradcam": [
+    {
+      "image": "airplane.png",
+      "predicted_class_index": 8,
+      "predicted_class": "ship",
+      "confidence": 0.4330107569694519,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "bird.png",
+      "predicted_class_index": 6,
+      "predicted_class": "frog",
+      "confidence": 0.3710308074951172,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "automobile.png",
+      "predicted_class_index": 3,
+      "predicted_class": "cat",
+      "confidence": 0.3268721103668213,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "cat.jpg",
+      "predicted_class_index": 6,
+      "predicted_class": "frog",
+      "confidence": 0.2672286629676819,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "deer.png",
+      "predicted_class_index": 3,
+      "predicted_class": "cat",
+      "confidence": 0.198706716299057,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "dog.png",
+      "predicted_class_index": 6,
+      "predicted_class": "frog",
+      "confidence": 0.41976603865623474,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "frog.png",
+      "predicted_class_index": 6,
+      "predicted_class": "frog",
+      "confidence": 0.5504316687583923,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "horse.png",
+      "predicted_class_index": 3,
+      "predicted_class": "cat",
+      "confidence": 0.2710041403770447,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "hours.png",
+      "predicted_class_index": 3,
+      "predicted_class": "cat",
+      "confidence": 0.2710041403770447,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "ship.png",
+      "predicted_class_index": 8,
+      "predicted_class": "ship",
+      "confidence": 0.6305957436561584,
+      "layer": "block_3_layer_4_out"
+    },
+    {
+      "image": "truck.png",
+      "predicted_class_index": 8,
+      "predicted_class": "ship",
+      "confidence": 0.24918228387832642,
+      "layer": "block_3_layer_4_out"
+    }
+  ]
+}

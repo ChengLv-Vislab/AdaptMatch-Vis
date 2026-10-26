@@ -1,0 +1,17 @@
+{
+  "num_labeled": 4000,
+  "epochs": 300,
+  "selection_split": "validation",
+  "recommended": {
+    "alpha": 0.08,
+    "beta": 0.45,
+    "gamma": 0.47
+  },
+  "default_id": "S9",
+  "default_weights": {
+    "alpha": 0.08,
+    "beta": 0.45,
+    "gamma": 0.47
+  },
+  "best_validation_configuration_id": "S9"
+}

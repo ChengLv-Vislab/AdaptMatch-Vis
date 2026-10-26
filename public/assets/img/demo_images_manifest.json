@@ -1,0 +1,69 @@
+{
+  "source_split": "CIFAR-10 official test split",
+  "selection": "first sample of each class in dataset order",
+  "images": [
+    {
+      "class_index": 0,
+      "class_name": "airplane",
+      "test_index": 3,
+      "filename": "airplane.png"
+    },
+    {
+      "class_index": 1,
+      "class_name": "automobile",
+      "test_index": 6,
+      "filename": "automobile.png"
+    },
+    {
+      "class_index": 2,
+      "class_name": "bird",
+      "test_index": 25,
+      "filename": "bird.png"
+    },
+    {
+      "class_index": 3,
+      "class_name": "cat",
+      "test_index": 0,
+      "filename": "cat.jpg"
+    },
+    {
+      "class_index": 4,
+      "class_name": "deer",
+      "test_index": 22,
+      "filename": "deer.png"
+    },
+    {
+      "class_index": 5,
+      "class_name": "dog",
+      "test_index": 12,
+      "filename": "dog.png"
+    },
+    {
+      "class_index": 6,
+      "class_name": "frog",
+      "test_index": 4,
+      "filename": "frog.png"
+    },
+    {
+      "class_index": 7,
+      "class_name": "horse",
+      "test_index": 13,
+      "filename": "horse.png"
+    },
+    {
+      "class_index": 8,
+      "class_name": "ship",
+      "test_index": 1,
+      "filename": "ship.png"
+    },
+    {
+      "class_index": 9,
+      "class_name": "truck",
+      "test_index": 11,
+      "filename": "truck.png"
+    }
+  ],
+  "compatibility_aliases": {
+    "hours.png": "horse.png"
+  }
+}

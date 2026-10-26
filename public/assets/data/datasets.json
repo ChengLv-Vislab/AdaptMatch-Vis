@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "defaultDatasetId": "cifar10",
+  "datasets": [
+    {
+      "id": "cifar10",
+      "available": true,
+      "legacy": false,
+      "dataRoot": "/assets/data",
+      "imageRoot": "/assets/img",
+      "catalogPath": "/assets/data/weight_configurations.json",
+      "sourceProject": "Cifar10-Data",
+      "numLabeled": 4000,
+      "epochs": 300
+    },
+    {
+      "id": "stl10",
+      "available": true,
+      "legacy": false,
+      "dataRoot": "/assets/data/datasets/stl10",
+      "imageRoot": "/assets/img/datasets/stl10",
+      "previewImageRoot": "/assets/img/datasets/stl10/original-gallery",
+      "catalogPath": "/assets/data/datasets/stl10/weight_configurations.json",
+      "imageVersion": "8b3ff887e50b"
+    }
+  ]
+}

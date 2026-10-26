@@ -1,0 +1,403 @@
+:root {
+  --outer-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --outer-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --outer-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --red: rgb(255, 59, 48);
+  --blue: rgb(0, 122, 255);
+  --green: rgb(52, 199, 89);
+  --teal: rgb(90, 200, 250);
+  --light-gray: rgb(255, 255, 255);
+  --middle-gray: rgb(190, 190, 190);
+  --dark-gray: rgb(155, 155, 155);
+  --deep-gray: rgb(100, 100, 100);
+
+  --graph-background: #ffffff;
+}
+
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+#app,
+#app-page {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+#detailview button.control-button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+#detailview button.control-button:focus-visible {
+  outline: 2px solid #0075ff;
+  outline-offset: 2px;
+  opacity: 0.8;
+}
+
+/*
+ * 4K typography adaptation
+ *
+ * The visualization geometry intentionally remains untouched: no view widths,
+ * heights, positions, transforms, or chart scales are changed here.  The first
+ * media branch targets a true 3840 × 2160 CSS viewport at Chrome 100%; the
+ * second covers the same physical 4K display when Windows high-DPI scaling
+ * reduces the CSS viewport while Chrome itself remains at 100% zoom.
+ */
+@media (min-width: 3200px) and (min-height: 1600px),
+  (min-width: 2100px) and (min-height: 1000px) and (min-resolution: 1.5dppx) {
+  :root {
+    --adapt-system-title: 30px;
+    --adapt-view-title: 25px;
+    --adapt-chart-title: 18px;
+    --adapt-section-title: 18px;
+    --adapt-layer-title: 17px;
+    --adapt-layer-meta: 10px;
+    --adapt-body-label: 16px;
+    --adapt-axis-label: 16px;
+    --adapt-tick-label: 14px;
+    --adapt-legend-label: 12px;
+    --adapt-micro-label: 8px;
+  }
+
+  /*
+   * Join the complete overview into one continuous 4K canvas.  The upper
+   * metric row uses the measured matrix height. Its width is
+   * content-aware: comparison reserves its
+   * full-height triangle and corner rankings, while accuracy takes the rest.
+   * The upper model/ACCT region uses the remaining viewport height.
+   */
+  #app-page {
+    min-height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #header {
+    flex: 0 0 40px;
+    width: 100%;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
+
+  #explainer {
+    height: auto !important;
+    min-height: 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #explainer > .overview {
+    height: auto !important;
+    min-height: 0;
+    flex: 1 1 0;
+    width: 100%;
+    margin: 0 !important;
+    justify-content: flex-start;
+  }
+
+  #explainer .overview-header {
+    margin-bottom: 0 !important;
+    padding: 4px 4px 0 !important;
+    flex: 0 0 auto;
+  }
+
+  #explainer .cnn {
+    min-height: 0;
+    flex: 1 1 auto;
+  }
+
+  #explainer .cnn > #cnn-svg {
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  /* Keep the three weight controls above the ACCT decision branch. */
+  #explainer .cnn .slider-group {
+    gap: 0 !important;
+  }
+
+  #explainer > .charts {
+    min-height: 0;
+    height: var(--metric-row-height);
+    flex: 0 0 var(--metric-row-height);
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  #performance-container {
+    height: 100% !important;
+    width: 100% !important;
+    min-height: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* Level 1: system title. */
+  #header #logo-text {
+    font-size: var(--adapt-system-title) !important;
+    line-height: 1 !important;
+    margin-top: -8px;
+  }
+
+  /* Level 2: primary view title. */
+  .overview-header .overview-title {
+    font-size: var(--adapt-view-title) !important;
+    line-height: 1.15 !important;
+  }
+
+  .overview-header {
+    font-size: var(--adapt-legend-label) !important;
+  }
+
+  /* Header controls remain in their original flex positions. */
+  .overview-header .button,
+  .overview-header .current-image-name,
+  .overview-header .label,
+  .overview-header select {
+    font-size: var(--adapt-body-label) !important;
+  }
+
+  /* CNN layer names, dimensions, annotations, and output labels. */
+  #cnn-svg .layer-label,
+  #cnn-svg .layer-label text,
+  #cnn-svg .layer-intermediate-label,
+  #cnn-svg .layer-intermediate-label text {
+    font-size: var(--adapt-layer-title) !important;
+  }
+
+  #cnn-svg .layer-detailed-label text > tspan:first-child {
+    font-size: var(--adapt-layer-title) !important;
+  }
+
+  #cnn-svg .layer-detailed-label text > tspan:not(:first-child),
+  #cnn-svg > text > tspan {
+    font-size: var(--adapt-layer-meta) !important;
+  }
+
+  #cnn-svg .annotation-text {
+    font-size: var(--adapt-tick-label) !important;
+  }
+
+  #cnn-svg .output-text {
+    font-size: 17px !important;
+  }
+
+  #cnn-svg .colorLegend,
+  #cnn-svg .colorLegend text,
+  #cnn-svg .legend text {
+    font-size: var(--adapt-legend-label) !important;
+  }
+
+  /* ACCT typography is scoped by meaning. Avoid broad font-size attribute
+     selectors: they also resize unrelated SVG micro-labels and cause
+     collisions inside fixed-size glyphs. */
+  #cnn-svg .acct-title,
+  #cnn-svg .acct-decision-label,
+  #cnn-svg .acct-threshold-value {
+    font-size: var(--adapt-section-title) !important;
+  }
+
+  #cnn-svg .acct-comparison-symbol {
+    font-size: var(--adapt-chart-title) !important;
+  }
+
+  #cnn-svg .acct-threshold-label {
+    font-size: 9px !important;
+  }
+
+  #cnn-svg .acct-component-label,
+  #cnn-svg .acct-component-value {
+    font-size: 12px !important;
+  }
+
+  /* ACCT adjustment slider typography. */
+  .cnn .slider-name {
+    font-size: var(--adapt-axis-label) !important;
+  }
+
+  .cnn .slider-min,
+  .cnn .slider-max {
+    font-size: var(--adapt-legend-label) !important;
+  }
+
+  .cnn .slider-value-display {
+    font-size: var(--adapt-tick-label) !important;
+  }
+
+  /* Level 3: titles for the three performance views. */
+  #performance-container .chart-title {
+    font-size: var(--adapt-chart-title) !important;
+  }
+
+  /* This long subsection heading shares a row with fixed-position class
+     controls, so it keeps its original 12px width to avoid any collision. */
+  #performance-container .chart-title.category-title {
+    font-size: 13px !important;
+  }
+
+  #performance-container .axis-title,
+  #performance-container .chart-subtitle {
+    font-size: 16px !important;
+  }
+
+  #performance-container .chart-axis .tick text,
+  #performance-container .category-x-axis .tick text,
+  #performance-container .category-y-axis .tick text {
+    font-size: 14px !important;
+  }
+
+  /* Class buttons are only 44 × 15px; keep their labels inside the glyph. */
+  #performance-container .chart-control-label {
+    font-size: 14px !important;
+  }
+
+  #performance-container .chart-legend text {
+    font-size: 12px !important;
+  }
+
+  #performance-container .matrix-legend-label,
+  #performance-container .matrix-difference-label {
+    font-size: 8px !important;
+  }
+
+  #performance-container .matrix-cell-value {
+    font-size: 7px !important;
+  }
+
+  #performance-container .accuracy-legend text {
+    font-size: 13px !important;
+    opacity: 1 !important;
+  }
+
+  #performance-container .matrix-section-label {
+    font-size: 12px !important;
+  }
+
+  #performance-container .matrix-row-label,
+  #performance-container .matrix-column-label {
+    font-size: 12px !important;
+  }
+
+  /* Keep legends as the smallest typography tier. */
+  #performance-container .loss-legend text {
+    font-size: 12px !important;
+  }
+
+  /* Optional overlays and the ACCT panel follow the same hierarchy. */
+  .modal-content .modal-title,
+  .acct-controller .header h3 {
+    font-size: var(--adapt-chart-title) !important;
+  }
+
+  .acct-controller .formula,
+  .acct-controller .section-title {
+    font-size: var(--adapt-section-title) !important;
+  }
+
+  .modal-content,
+  .modal-content .image-label,
+  .acct-controller .parameter-control label,
+  .acct-controller .threshold-value,
+  .acct-controller .stat-value {
+    font-size: var(--adapt-body-label) !important;
+  }
+
+  .acct-controller .formula-description,
+  .acct-controller .parameter-status,
+  .acct-controller .class-name,
+  .acct-controller .stat-label {
+    font-size: var(--adapt-tick-label) !important;
+  }
+
+  .acct-controller .original-value,
+  .acct-controller .stat-change {
+    font-size: var(--adapt-legend-label) !important;
+  }
+}
+
+/* Larger values for a native 3840 × 2160 CSS viewport at Chrome 100%. */
+@media (min-width: 3200px) and (min-height: 1600px) {
+  :root {
+    --adapt-system-title: 38px;
+    --adapt-view-title: 32px;
+    --adapt-chart-title: 18px;
+    --adapt-section-title: 15px;
+    --adapt-layer-title: 18px;
+    --adapt-layer-meta: 10px;
+    --adapt-body-label: 14px;
+    --adapt-axis-label: 13px;
+    --adapt-tick-label: 11px;
+    --adapt-legend-label: 9px;
+    --adapt-micro-label: 9px;
+  }
+
+  /* Keep the native-4K controls long while sharing the same non-overlapping
+     label/value geometry as the high-DPI layout. */
+  #explainer .cnn .slider-group {
+    --acct-track-width: 210px;
+    --acct-track-height: 6px;
+    --acct-track-inset: 3px;
+    --acct-thumb-size: 12px;
+    --acct-thumb-half: 6px;
+    --acct-endpoint-width: 34px;
+    --acct-control-height: 36px;
+    --acct-track-top: 24px;
+    --acct-endpoint-top: 20px;
+    --acct-value-offset: -23px;
+    gap: 12px !important;
+  }
+
+  #explainer .cnn .small-slider {
+    width: var(--acct-track-width) !important;
+    height: var(--acct-track-height) !important;
+  }
+
+  #explainer .cnn .small-slider::-webkit-slider-thumb {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  #explainer .cnn .small-slider::-moz-range-thumb {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+}
+/* 
+#cnn-svg {
+  overflow: visible;
+} */

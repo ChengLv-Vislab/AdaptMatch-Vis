@@ -1,0 +1,9 @@
+{
+  "evaluation_split": "validation",
+  "legacy_compatibility": {
+    "accuracy_results.csv:test_acc": "validation accuracy percent",
+    "confusion_matrices.csv": "validation confusion matrix",
+    "learning_curve.json:Top-1 Acc": "validation accuracy percent"
+  },
+  "reason": "The fixed frontend field names are retained for compatibility. The test set is evaluated once after model selection."
+}
